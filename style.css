@@ -70,3 +70,11 @@
     font-weight: 700;
     line-height: normal;
 }
+
+.connect {
+    width: 655px;
+    height: 578px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: var(--Violet-Principal, #C589E8);
+}
