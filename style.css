@@ -1,0 +1,72 @@
+.navbar {
+    background: #C589E8;
+}
+
+.profile {
+    float: right;
+    width: 119px;
+    height: 119px;
+}
+
+.img-fluid {
+    width: 580px;
+    height: 117px;
+}
+
+.h2 {
+    color: #fe3f3f;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.search {
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+
+.search .block {
+    border-radius: 16px;
+    border: 1px solid var(--Color, #00120B);
+    color: rgba(0, 0, 0, 0.24);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    width: 478px;
+    height: 79px;
+    padding: 8px 192px 8px 39px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.search .bouton {
+    display: flex;
+    width: 233px;
+    height: 84px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: var(--Violet-Pop, #7F0799);
+    color: var(--Blanc, #F6F6F6);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
