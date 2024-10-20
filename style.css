@@ -263,3 +263,50 @@
     padding: 10px 20px;
     border-radius: 20px;
 }
+
+.main {
+    display: inline-flex;
+    padding: 8px;
+    align-items: center;
+    gap: 124px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 16px;
+    border: 1px solid #000;
+}
+
+.more {
+    display: flex;
+    width: 938px;
+    padding: 8px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 29px;
+    border-radius: 16px;
+    background: var(--Violet-Principal, #C589E8);
+    color: var(--Blanc, #F6F6F6);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.letter {
+    display: flex;
+    align-items: center;
+}
+
+.addfav {
+    display: flex;
+    align-items: center;
+}
