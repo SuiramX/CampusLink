@@ -16,8 +16,7 @@
     </div>
     <div class="recherche">
         <div class="texte">
-            Rechercher...
-        </div>
+Chercher un étudiant...        </div>
         <img src="img/search-01.png" alt="Rechercher" class="search">
     </div>
     <div class="deploiement">
@@ -58,3 +57,18 @@
             <div class="name">Marius BERNARD</div>
             <img src="img/Icon.png" alt="favorite" class="favorite">
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const users = document.querySelectorAll(".user");
+
+                users.forEach(user => {
+                    user.addEventListener("click", () => {
+                        window.location.href = "profile.html";
+                    });
+                });
+            });
+        </script>
+    </div>
+</body>
+
+</html>
