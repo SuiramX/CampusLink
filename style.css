@@ -265,6 +265,8 @@
 }
 
 .main {
+    width: 621px;
+    height: 178px;
     display: inline-flex;
     padding: 8px;
     align-items: center;
@@ -277,6 +279,7 @@
     line-height: normal;
     border-radius: 16px;
     border: 1px solid #000;
+    justify-content: center;
 }
 
 .more {
