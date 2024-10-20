@@ -176,7 +176,6 @@
     color: red;
 }
 
-/* Overlay pour masquer le contenu derrière */
 .overlay {
     display: none;
     position: fixed;
@@ -196,13 +195,16 @@
 }
 
 .recherche {
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
+    width: 921px;
+    height: 109px;
+    padding: 41px 42px;
+    justify-content: space-between;
     align-items: center;
-    gap: 148px;
-    border-radius: 16px;
-    border: 1px solid var(--Color, #00120B);
-    background: var(--Blanc, #F6F6F6);
+    flex-shrink: 0;
+    border-radius: 64px;
+    border: 1px solid #363636;
+    background: #FFF;
 }
 
 .recherche .texte {
@@ -312,4 +314,98 @@
 .addfav {
     display: flex;
     align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 16px;
+
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        max-width: 768px;
+    }
+
+    .profile {
+        width: 80px;
+        height: 80px;
+    }
+
+    .col6 {
+        width: 100%;
+    }
+
+    .col12 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search {
+        max-width: 400px;
+    }
+
+    .connect {
+        width: 90%;
+    }
+
+    .recherche {
+        padding: 10px;
+        max-width: 400px;
+    }
+
+    .more {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .search .block,
+    .search .block-inline {
+        width: 100%;
+    }
+
+    .search .bouton {
+        width: 100%;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Media Queries pour une meilleure responsivité */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .img-fluid {
+        width: 80%;
+
+        height: auto;
+
+    }
+
+    .navbar .logo {
+        max-width: 120px;
+
+    }
+
+    .profile {
+        width: 60px;
+        height: 60px;
+    }
 }
