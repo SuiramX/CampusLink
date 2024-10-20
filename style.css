@@ -214,9 +214,6 @@
     line-height: normal;
 }
 
-.deployyear {
-    transform: rotate(180deg);
-}
 
 .user {
     background-color: #C589E8;
@@ -239,5 +236,30 @@
 .bonjour {
     width: 58px;
     height: 58px;
-    gap: 12px;
+
+}
+
+.deploiement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #E6C2F3;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    font-size: 16px;
+}
+
+.deployyear {
+    width: 30px;
+    height: 30px;
+}
+
+.nombre {
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #903399;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
