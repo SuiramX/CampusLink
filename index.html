@@ -6,17 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CampusLink</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-<body style="
-    margin: 0;
-">
+<body style="margin: 0;">
     <div class="navbar">
         <!--Logo CampusLink-->
         <img src="img/campuslink.png" alt="Logo CampusLink" class="img-fluid">
         <img src="img/user-profile-circle.png" alt="Profile" class="profile">
     </div>
+    <!--Barre de recherche-->
     <div class="col12">
         <div class="col6">
             <div class="connect">
@@ -24,29 +22,104 @@
                 Vous êtes connecté dans : HEP NANTES
             </div>
         </div>
+
         <div class="col6">
-        <div class="search">
-            Chercher quelqu’un
+            <div class="search">
+                Chercher quelqu’un
 
-            <div class="block">
-                Nom
+                <div class="block">Nom</div>
+                <div class="block">Prénom</div>
+
+                        <div class="block-inline" id="schoolSelect">
+                            <span>École</span>
+                            <img src="img/arrow-down-contained-01.png" alt="Déploiement des autres années" class="deploy">
+                        </div>
+
+                        <div class="block-inline" id="yearSelect">
+                            <span>Année</span>
+                            <img src="img/arrow-down-contained-01.png" alt="Déploiement des autres écoles" class="deploy">
+                        </div>
+
+                        <div class="bouton" id="searchBtn">Rechercher</div>
+                    </div>
+                </div>
             </div>
-            <div class="block">
-                Prénom
+
+            <!-- Pop-up pour sélection École -->
+            <div class="overlay" id="overlay"></div>
+            <div class="modal" id="schoolModal">
+                <div class="modal-header">Choisissez une école</div>
+                <div class="modal-options">
+                    <div>EPSI/WIS</div>
+                    <div>IFAG</div>
+                    <div>IDRAC</div>
+                    <div>IET</div>
+                    <div>IEFT</div>
+                    <div>SUP' DE COM</div>
+                </div>
+                <div class="modal-close" id="closeSchoolModal">Fermer</div>
             </div>
-            <div class="block-inline">
-                <span>Ecole</span>
-                <img src="img/arrow-down-contained-01.png" alt="Déploiement des autres anbées" class="deploy">
+
+            <!-- Pop-up pour sélection Année -->
+            <div class="modal" id="yearModal">
+                <div class="modal-header">Choisissez une année</div>
+                <div class="modal-options">
+                    <div>1ère année</div>
+                    <div>2ème année</div>
+                    <div>3ème année</div>
+                    <div>4ème année</div>
+                    <div>5ème année</div>
+                </div>
+                <div class="modal-close" id="closeYearModal">Fermer</div>
             </div>
-            <div class="block-inline">
-                <span>Année</span>
-                <img src="img/arrow-down-contained-01.png" alt="Déploiement des autres écoles" class="deploy">
-            </div>
-            <div class="bouton">
-                Rechercher
-            </div>
+
         </div>
-        </div>
+    </div>
+    <script>
+        // Références aux éléments du DOM
+        const schoolSelect = document.getElementById('schoolSelect');
+        const yearSelect = document.getElementById('yearSelect');
+        const schoolModal = document.getElementById('schoolModal');
+        const yearModal = document.getElementById('yearModal');
+        const overlay = document.getElementById('overlay');
+        const closeSchoolModal = document.getElementById('closeSchoolModal');
+        const closeYearModal = document.getElementById('closeYearModal');
+
+        // Fonctions pour ouvrir et fermer les modales
+        function openModal(modal) {
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        function closeModal(modal) {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+
+        // Événements d'ouverture des modales
+        schoolSelect.addEventListener('click', () => openModal(schoolModal));
+        yearSelect.addEventListener('click', () => openModal(yearModal));
+
+        // Événements de fermeture des modales
+        closeSchoolModal.addEventListener('click', () => closeModal(schoolModal));
+        closeYearModal.addEventListener('click', () => closeModal(yearModal));
+
+        // Redirection vers recherche.html au clic sur "Rechercher"
+        document.getElementById('searchBtn').addEventListener('click', function () {
+            window.location.href = 'recherche.html';
+        });
+
+        // Fermeture des modales si on clique en dehors
+        overlay.addEventListener('click', () => {
+            closeModal(schoolModal);
+            closeModal(yearModal);
+        });
+    </script>
+    <script>
+        // Redirection vers recherche.html au clic sur le bouton "Rechercher"
+        document.getElementById('searchBtn').addEventListener('click', function () {
+            window.location.href = 'recherche.html';
+        });
+    </script>
 </body>
-
 </html>

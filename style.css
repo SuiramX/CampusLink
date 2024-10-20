@@ -104,6 +104,11 @@
     margin-top: 50px;
 }
 
+.search .bouton .a {
+    color: white;
+    text-decoration: none;
+}
+
 .imghep {
     width: 377px;
     height: 378px;
@@ -111,7 +116,7 @@
 }
 
 .connect {
-    width: 50%;
+    width: 655px;
     height: 578px;
     flex-shrink: 0;
     border-radius: 32px;
@@ -120,6 +125,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -134,4 +140,50 @@
     width: calc((100% / 12)* 12);
     border: 2px solid #fbedff;
     flex-direction: row-reverse;
+}
+/* Styles pour le modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px;
+    padding: 20px;
+}
+
+.modal-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-options {
+    margin-bottom: 10px;
+}
+
+.modal-options div {
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.modal-close {
+    text-align: right;
+    cursor: pointer;
+    color: red;
+}
+
+/* Overlay pour masquer le contenu derrière */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
